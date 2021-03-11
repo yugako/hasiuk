@@ -1,11 +1,10 @@
 import styled, { createGlobalStyle } from 'styled-components';
 
 export const GlobalStyles = createGlobalStyle`
-  @import url('https://fonts.googleapis.com/css2?family=Reggae+One&family=Montserrat:wght@400;500;700&display=swap');
-
   :root {
     --light: #fff;
     --dark: #000;
+    --dark-secondary: #222329;
     --primary: #1b9cfc;
   }
 
@@ -18,11 +17,24 @@ export const GlobalStyles = createGlobalStyle`
   html, body {
     font-family: 'Montserrat', sans-serif;
     background-color: var(--dark);
+    overflow-x: hidden;
+  }
+
+  #particles {
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
   }
 `;
 
 export const LayoutContainer = styled.div`
   max-width: 1024px;
-  margin: auto;
+  margin: 0 auto;
   padding: 0 15px;
+  @media (max-width: 768px) {
+    max-width: 100%;
+  }
 `;

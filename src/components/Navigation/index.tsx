@@ -30,10 +30,14 @@ const routes = [
   },
 ]
 
-export const Navigation = () => (
-  <NavigationList>
-    {routes.map(route => (
-      <Link to={route.link}>{route.label}</Link>
-    ))}
-  </NavigationList>
+export const Navigation = ({ active }) => (
+  <>
+    <NavigationList active={active}>
+      {routes.map(route => (
+        <Link key={route.label} to={route.link}>
+          {route.label}
+        </Link>
+      ))}
+    </NavigationList>
+  </>
 )

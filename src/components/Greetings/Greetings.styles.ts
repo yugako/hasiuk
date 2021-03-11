@@ -24,6 +24,11 @@ export const GretingsTitle = styled.h1`
   font-size: 60px;
   line-height: 1.5;
   font-family: 'Reggae One', cursive;
+  @media (max-width: 768px) {
+    font-size: 40px;
+    line-height: 1.3;
+    text-align: center;
+  }
 `;
 
 export const GreetingsPosition = styled.h4`
@@ -33,4 +38,5 @@ export const GreetingsPosition = styled.h4`
   font-size: 24px;
   opacity: 0.8;
   font-weight: 400;
+  text-align: center;
 `;

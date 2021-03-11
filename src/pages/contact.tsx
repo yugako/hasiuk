@@ -1,8 +1,8 @@
 import React from 'react';
 import { Layout } from '../Layout';
 
-export default function Services() {
+export default function Contact() {
   return (
-    <Layout>Services</Layout>
+    <Layout>Contact</Layout>
   )
 }

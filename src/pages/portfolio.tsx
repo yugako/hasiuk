@@ -1,8 +1,8 @@
 import React from 'react';
 import { Layout } from '../Layout';
 
-export default function Services() {
+export default function Portfolio() {
   return (
-    <Layout>Services</Layout>
+    <Layout>Portfolio</Layout>
   )
 }
