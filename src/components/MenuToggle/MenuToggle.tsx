@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import { MenuLine, MenuToggleWrapper } from './MenuToggle.styles';
 
 export const MenuToggle = ({active, clickHandler}) => {

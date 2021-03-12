@@ -4,6 +4,7 @@ export const GlobalStyles = createGlobalStyle`
   :root {
     --light: #fff;
     --dark: #000;
+    --grey: #ccc;
     --dark-secondary: #222329;
     --primary: #1b9cfc;
   }
@@ -37,4 +38,14 @@ export const LayoutContainer = styled.div`
   @media (max-width: 768px) {
     max-width: 100%;
   }
+`;
+
+export const FlexWrapper = styled.div<{direction?: string}>`
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  flex-direction: ${({direction}) => direction || 'row'};
 `;

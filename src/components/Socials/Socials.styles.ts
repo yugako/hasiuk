@@ -1,11 +1,17 @@
 import styled from "styled-components";
 
-export const SocialsWrapper = styled.div`
+export const SocialsWrapper = styled.div<{horizontal?: string}>`
   display: flex;
   align-items: center;
   margin-top: 15px;
+  position: relative;
+  z-index: 2;
+  justify-content: ${({horizontal}) => horizontal || 'flex-start'};
   a {
-    margin-right: 10px;
+    margin: 0 10px;
+    &:first-child {
+      margin-left: 0;
+    }
     
     svg {
       width: 20px;

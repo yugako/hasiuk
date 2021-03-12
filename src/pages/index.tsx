@@ -1,20 +1,20 @@
-import React from "react"
-
+import * as React from "react"
 import { Layout } from "../Layout"
 import { Greetings } from "../components/Greetings"
-
-
-import { HomeWrapper } from "../assets/styles/home.styles"
-import { LayoutContainer } from "../Layout/Layout.styles"
+import { Socials } from "../components/Socials"
+import { LayoutContainer, FlexWrapper } from "../Layout/Layout.styles"
+import SEO from "../components/SEO"
 
 export default function Home() {
   return (
     <Layout>
-      <HomeWrapper>
-        <LayoutContainer>
+      <SEO />
+      <LayoutContainer>
+        <FlexWrapper style={{flexDirection: 'column'}}>
           <Greetings />
-        </LayoutContainer>
-      </HomeWrapper>
+          <Socials horizontal={"center"} />
+        </FlexWrapper>
+      </LayoutContainer>
     </Layout>
   )
 }
