@@ -1,41 +1,47 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components"
 
-export const MenuToggleWrapper = styled.div<{active: boolean}>`
-  display: flex;
-  flex-direction:column;
-  justify-content: space-between;
-  height: 15px;
-  cursor: pointer;
-  @media (min-width: 768px) {
-    display: none;
+const MenuToggleActive = css`
+  transform: rotate(-45deg);
+  transition-delay: 0.3s;
+  &::before {
+    transform: rotate(-90deg) translateY(0px);
   }
-
-  ${({active}) => active 
-    &&
-      `
-        justify-content: center;
-        align-items: center;
-        
-        span:nth-of-type(2) {
-          display: none;
-        }
-
-        span:nth-of-type(1) {
-          transform: rotate(-45deg) translateX(-1px);
-        }
-
-        span:nth-of-type(3) {
-          transform: rotate(45deg) translateX(-0.5px);
-        }
-
-      `
+  
+  &::after {
+    content: none;
   }
-`;
+`
 
-export const MenuLine = styled.span`
+export const MenuToggle = styled.div<{active: boolean}>`
   width: 20px;
   height: 2px;
   background-color: var(--light);
   display: block;
   transform-origin: 50% 50%;
+  position: relative;
+  transition-delay: 0.3s;
+  transition: .5s ease-out;
+  &::before, &::after {
+    content: '';
+    display: block;
+    width: 20px;
+    height: 2px;
+    background-color: var(--light);
+  }
+  &::before {
+    transform: translateY(-7px);
+    transition: .5s ease-out;
+  }
+
+  &::after {
+    transform: translateY(5px);
+    transition: .5s ease-out;
+  }
+  @media (min-width: 768px) {
+    opacity: 0;
+    visibility: hidden;
+    transition: .5s ease-out;
+  }
+
+  ${({active}) => active && MenuToggleActive};
 `;

@@ -6,9 +6,10 @@ export const HeaderWrapper = styled.header<{active: boolean}>`
   right: 0;
   z-index: 9999;
   padding: 20px 0;
-  background-color: ${props => props.active ? 'var(--dark-secondary)' : 'transparent'};
-  @media (min-width: 768px) {
-    background-color: transparent;
+  background-color: ${props => props.active ? 'var(--dark-secondary)' : 'var(--dark)'};
+  & + div {
+    padding-top: 80px;
+    padding-bottom: 80px;
   }
 `;
 

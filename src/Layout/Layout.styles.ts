@@ -41,11 +41,16 @@ export const LayoutContainer = styled.div`
 `;
 
 export const FlexWrapper = styled.div<{direction?: string}>`
-  min-height: 100vh;
+  min-height: calc( 100vh - 160px );
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   z-index: 2;
   flex-direction: ${({direction}) => direction || 'row'};
+`;
+
+export const GridWrapper = styled.div<{columns?: number}>`
+  display: grid;
+  grid-template-columns: repeat(auto-fill, calc(${({columns}) => ( 100 / columns ) || 100})%);
 `;

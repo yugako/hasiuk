@@ -1,12 +1,15 @@
-import React, { useEffect, useState } from "react"
+import * as React from "react"
 import { LayoutContainer } from "../../Layout/Layout.styles"
 import { Logo } from "../Logo"
 import { Navigation } from "../Navigation"
-import { MenuToggle } from "../MenuToggle/MenuToggle"
+import { MenuToggleButton } from "../MenuToggle/MenuToggle"
 import { HeaderNav, HeaderWrapper } from "./Header.styles"
 
 export const Header = () => {
-  const [isActive, setIsActive] = useState(false);
+  const [isActive, setIsActive] = React.useState(false);
+  const onClick = () => {
+    setIsActive(!isActive);
+  }
   
   return (
     <HeaderWrapper active={isActive}>
@@ -14,7 +17,7 @@ export const Header = () => {
         <HeaderNav>
           <Logo />
           <Navigation active={isActive} />
-          <MenuToggle active={isActive} clickHandler={() => setIsActive(!isActive)} />
+          <MenuToggleButton active={isActive} clickHandler={ onClick } />
         </HeaderNav>
       </LayoutContainer>
     </HeaderWrapper>

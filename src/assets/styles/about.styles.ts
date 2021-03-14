@@ -8,7 +8,6 @@ export const AboutContent = styled.div`
   border-radius: 5px;
   @media (max-width: 768px) {
     flex-direction: column;
-    margin: 75px 0;
     padding: 30px;
   }
 `

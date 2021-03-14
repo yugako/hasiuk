@@ -1,12 +1,8 @@
 import * as React from 'react';
-import { MenuLine, MenuToggleWrapper } from './MenuToggle.styles';
+import { MenuToggle } from './MenuToggle.styles';
 
-export const MenuToggle = ({active, clickHandler}) => {
+export const MenuToggleButton = ({active, clickHandler}) => {
   return (
-    <MenuToggleWrapper active={active} onClick={clickHandler}>
-      <MenuLine />
-      <MenuLine />
-      <MenuLine />
-    </MenuToggleWrapper>
+    <MenuToggle active={active} onClick={clickHandler} />
   );
 }
