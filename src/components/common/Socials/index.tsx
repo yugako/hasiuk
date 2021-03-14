@@ -1,11 +1,6 @@
-import * as React from 'react'
-import { IEnvelope } from "../Icons/Envelope"
-import { ILinkedin } from "../Icons/Linkedin"
-import { IGithub } from "../Icons/Github"
+import * as React from "react"
+import { IEnvelope, ILinkedin, IGithub, ITelegram, IFacebook, IInstagram } from "../Icons"
 import { SocialsWrapper } from "./Socials.styles"
-import { ITelegram } from "../Icons/Telegram"
-import { IFacebook } from "../Icons/Facebook"
-import { IInstagram } from "../Icons/Instagram"
 
 const links = [
   {
@@ -28,13 +23,13 @@ const links = [
     to: "https://www.instagram.com/yurko_hasiuk/",
     icon: IInstagram
   }
-];
+]
 
 interface ISocials {
   horizontal?: string
 }
 
-export const Socials: React.FC<ISocials> = ({horizontal}) => (
+export const Socials: React.FC<ISocials> = ({ horizontal }) => (
   <SocialsWrapper horizontal={horizontal}>
     {links.map(link => (
       <a target={"_blank"} key={link.to} href={link.to}>

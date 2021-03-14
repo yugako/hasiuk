@@ -1,6 +1,6 @@
 import styled from "styled-components"
 
-export const GretingsWrapper = styled.div`
+export const GreetingsWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;

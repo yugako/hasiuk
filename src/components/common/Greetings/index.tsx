@@ -1,12 +1,12 @@
-import React from "react"
-import { GreetingsPosition, GretingsSubtitle, GretingsTitle, GretingsWrapper } from "./Greetings.styles"
+import * as React from "react"
+import { GreetingsPosition, GretingsSubtitle, GretingsTitle, GreetingsWrapper } from "./Greetings.styles"
 
 export const Greetings = () => {
   return (
-    <GretingsWrapper>
+    <GreetingsWrapper>
       <GretingsSubtitle>Hi there, I'm</GretingsSubtitle>
       <GretingsTitle>Yurii Hasiuk</GretingsTitle>
       <GreetingsPosition>Frontend &amp; Wordpress developer</GreetingsPosition>
-    </GretingsWrapper>
+    </GreetingsWrapper>
   )
 }

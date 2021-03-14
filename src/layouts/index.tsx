@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react"
 import Particles from "react-tsparticles"
 
-import { Header } from "../components/Header"
+import { Header } from "../components/common/Header"
 import { GlobalStyles } from "./Layout.styles"
 
 import { options } from "../utils/particles-options"

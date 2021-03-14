@@ -50,7 +50,13 @@ export const FlexWrapper = styled.div<{direction?: string}>`
   flex-direction: ${({direction}) => direction || 'row'};
 `;
 
-export const GridWrapper = styled.div<{columns?: number}>`
+export const GridWrapper = styled.div<{columns?: number, gap?: number}>`
   display: grid;
-  grid-template-columns: repeat(auto-fill, calc(${({columns}) => ( 100 / columns ) || 100})%);
+  grid-template-columns: repeat(auto-fill, calc(${({columns}) => ( 100 / columns ) || 100}% - ${({gap}) => gap || 10}px));
+  grid-gap: ${({gap}) => gap || 10}px;
+  width: 100%;
+  margin-top: 15px;
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
 `;

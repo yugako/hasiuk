@@ -1,21 +1,21 @@
 import * as React from "react"
-import { Layout } from "../Layout"
+import { Layout } from "../../layouts"
 import {
   AboutContent,
   AboutImage,
   AboutText
-} from "../assets/styles/about.styles"
-import { Socials } from "../components/Socials"
-import { Heading } from "../components/Heading"
-import { LayoutContainer, FlexWrapper } from "../Layout/Layout.styles"
+} from "../../components/screens/About/about.styles"
+import { Socials } from "../../components/common/Socials"
+import { Heading } from "../../components/common/Heading"
+import { LayoutContainer, FlexWrapper } from "../../layouts/Layout.styles"
 // @ts-ignore
-import AuthorImage from "../assets/images/yurii_hasiuk.jpg"
-import SEO from "../components/SEO"
+import AuthorImage from "../../assets/images/yurii_hasiuk.jpg"
+import SEO from "../../components/common/SEO"
 
 export default function About() {
   return (
     <Layout>
-      <SEO title={'About'} />
+      <SEO title={'AboutEn'} />
       <FlexWrapper>
         <LayoutContainer>
           <AboutContent>

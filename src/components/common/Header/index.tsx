@@ -1,5 +1,5 @@
 import * as React from "react"
-import { LayoutContainer } from "../../Layout/Layout.styles"
+import { LayoutContainer } from "../../../layouts/Layout.styles"
 import { Logo } from "../Logo"
 import { Navigation } from "../Navigation"
 import { MenuToggleButton } from "../MenuToggle/MenuToggle"

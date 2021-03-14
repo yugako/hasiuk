@@ -1,11 +1,10 @@
 import * as React from "react"
-import { Layout } from "../Layout"
-import { Heading } from "../components/Heading"
-import { ServicesContainer } from "../assets/styles/services.styles"
-import { LayoutContainer, FlexWrapper } from "../Layout/Layout.styles"
-import { ServicesItem } from "../components/Services/ServicesItem"
-import { ICode, ICogs, IDesign, IWordpress } from "../components/Icons"
-import SEO from "../components/SEO"
+import { Layout } from "../layouts"
+import { Heading } from "../components/common/Heading"
+import { LayoutContainer, FlexWrapper, GridWrapper } from "../layouts/Layout.styles"
+import { ServicesItem } from "../components/screens/Services/ServicesItem"
+import { ICode, ICogs, IDesign, IWordpress } from "../components/common/Icons"
+import SEO from "../components/common/SEO"
 
 const servicesList = [
   {
@@ -37,7 +36,7 @@ export default function Services() {
       <LayoutContainer>
         <FlexWrapper direction={"column"}>
           <Heading text={"Services"} style={{ color: "var(--light)" }} />
-          <ServicesContainer>
+          <GridWrapper columns={2} gap={10}>
             {servicesList.map(service => (
               <ServicesItem
                 title={service.title}
@@ -45,7 +44,7 @@ export default function Services() {
                 Icon={service.icon}
               />
             ))}
-          </ServicesContainer>
+          </GridWrapper>
         </FlexWrapper>
       </LayoutContainer>
     </Layout>

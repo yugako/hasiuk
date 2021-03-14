@@ -8,8 +8,7 @@ export const HeaderWrapper = styled.header<{active: boolean}>`
   padding: 20px 0;
   background-color: ${props => props.active ? 'var(--dark-secondary)' : 'var(--dark)'};
   & + div {
-    padding-top: 80px;
-    padding-bottom: 80px;
+    padding: 75px 0;
   }
 `;
 
