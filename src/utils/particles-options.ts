@@ -23,7 +23,7 @@ export const options = {
         distance: 400,
         duration: 2,
         opacity: 0.8,
-        size: 40,
+        size: 50,
       },
       push: {
         quantity: 4,
@@ -46,7 +46,7 @@ export const options = {
       enable: true,
       outMode: "bounce",
       random: false,
-      speed: 6,
+      speed: 3,
       straight: false,
     },
     number: {
@@ -57,7 +57,7 @@ export const options = {
       value: 30,
     },
     opacity: {
-      value: 0.3,
+      value: 0.4,
     },
     shape: {
       type: "triangle",

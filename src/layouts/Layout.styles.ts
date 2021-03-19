@@ -20,6 +20,11 @@ export const GlobalStyles = createGlobalStyle`
     background-color: var(--dark);
     overflow-x: hidden;
   }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+  }
 
   #particles {
     height: 100vh;
